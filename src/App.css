@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.upload_imgs {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  margin-top: 80px;
+}
+
+.upload_imgs p {
+  font-size: 80px;
+}
+
+.img_border {
+  border: 2px dashed #fff;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.download {
+  margin-top: 30px;
+  background: #A1FF92;
+  border-radius: 10px;
+  border: none;
+  color: #505050;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.download:hover {
+  background: #486f42;
+}
