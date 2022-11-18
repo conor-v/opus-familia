@@ -12,6 +12,24 @@
   gap: 40px;
 }
 
+.navigation {
+  position: absolute;
+  top: 0;
+  background: rgb(78, 78, 78);
+  width: 100vw;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation img {
+  margin-left: 50px;
+}
+
+.navigation button {
+  margin-right: 50px;
+}
+
 .upload_imgs {
   display: flex;
   align-items: center;
@@ -23,11 +41,19 @@
   font-size: 80px;
 }
 
-.img_border {
+.img_border, .img_border_result {
   border: 2px dashed #fff;
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
+}
+
+.img_border {
+  width: 220px;
+  height: 220px;
+}
+
+.img_border_result {
+  width: 270px;
+  height: 270px;
 }
 
 .download {
