@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import exportAsImage from './hooks/exportAsImage'
 
 function App() {
+  const exportRef = useRef()
   const [frontFoto, setFrontFoto] = useState()
   const [frontDisplay, setFrontDisplay] = useState()
   const [backFoto, setBackFoto] = useState()
@@ -29,7 +31,7 @@ function App() {
     <div className='content'>
       <nav className='navigation'>
         <img src="/logo.svg" alt="logo" width={40}/>
-        <button>buy me a coffee</button>
+ 
       </nav>
       <div className='upload_imgs'>
         <div>
@@ -47,11 +49,13 @@ function App() {
         </div>
       </div>
       <div>
-        <div className='img_border_result'>
-          <div style={{backgroundImage: `url(${backDisplay})`}}></div>
-          <div style={{backgroundImage: `url(${frontDisplay})`}}></div>
+        <div className='img_border_result' ref={exportRef}>
+         
+          <img src={backDisplay} alt="" />
+          <img src={frontDisplay} alt="" />
+          
         </div>
-        <button className='download'>downloaden</button>
+        <button className='download' disabled={frontFoto && backFoto ? false : true} onClick={() => exportAsImage(exportRef.current, "test")}>downloaden</button>
       </div>
     </div>
   )

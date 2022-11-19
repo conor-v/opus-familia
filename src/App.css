@@ -54,6 +54,12 @@
   background-size: cover;
 }
 
+.img_border input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .img_border_result {
   width: 270px;
   height: 270px;
@@ -61,14 +67,13 @@
   overflow: hidden;
 }
 
-.img_border_result div {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+.img_border_result img {
+  position: absolute; 
+  left: -50%; 
+  right: -50%; 
+  margin-left: auto; 
+  margin-right: auto; 
+  height: 270px;
 }
 
 .download {
