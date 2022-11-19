@@ -34,17 +34,15 @@ function App() {
  
       </nav>
       <div className='upload_imgs'>
-        <div>
-          <div className='img_border' style={{backgroundImage: `url(${frontDisplay})`}}>
-            <input type="file" accept="image/png" name="frontimg" id="frontimg" onChange={(e) => handleImg(e, "front")}/>
-          </div>
+        <div className='upload_ing_container'>
+          <div className='img_border' style={{backgroundImage: `url(${frontDisplay})`}}></div>
+          <input style={{width: "50%"}} type="file" accept="image/png" name="frontimg" id="frontimg" onChange={(e) => handleImg(e, "front")}/>
           <h2>Front img (PNG)</h2>
         </div>
         <p>+</p>
-        <div>
-          <div className='img_border' style={{backgroundImage: `url(${backDisplay})`}}>
-            <input type="file" accept="image/png, image/jpg, image/jpeg" name="backimg" id="backimg" onChange={(e) => handleImg(e, "back")}/>
-          </div>
+        <div className='upload_ing_container'>
+          <div className='img_border' style={{backgroundImage: `url(${backDisplay})`}}></div>
+          <input style={{width: "50%"}} type="file" accept="image/png, image/jpg, image/jpeg" name="backimg" id="backimg" onChange={(e) => handleImg(e, "back")}/>
           <h2>Back img (PNG/JPG)</h2>
         </div>
       </div>
@@ -55,7 +53,7 @@ function App() {
           <img src={frontDisplay} alt="" />
           
         </div>
-        <button className='download' disabled={frontFoto && backFoto ? false : true} onClick={() => exportAsImage(exportRef.current, "test")}>downloaden</button>
+        <button className='download' disabled={frontFoto && backFoto ? false : true} onClick={() => exportAsImage(exportRef.current, "profile")}>downloaden</button>
       </div>
     </div>
   )

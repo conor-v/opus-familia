@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -28,6 +27,13 @@
 
 .navigation button {
   margin-right: 50px;
+}
+
+.upload_ing_container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 224px;
 }
 
 .upload_imgs {
